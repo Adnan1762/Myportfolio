@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: "General Sans";*/
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: #fff;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+}
+
+body h1:hover ~ #minicircle{
+    transform: scale(6);
+}
+
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem {
+    transform: translateY(100%);
+}
+
+#main {
+    width: 100%;
+    background-color: #030303;
+   
+
+
+}
+
+#mainpage {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    /*background-image: url(./media/large-triangles.svg);*/
+    background-image: url(./media/bg1.jpg);
+}
+
+body #particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+#nav {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 50px;
+}
+
+icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+#nav #nav-text {
+    /* Initial styles for the text */
+    text-decoration: none;
+    /* Remove underline by default */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    /* Add smooth transitions */
+    /* Optional: Increase font size or apply other styles */
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+/* Initially hide the text and set the icon's transform property */
+/*#nav-text {
+    /*display: none;
+    /*transition: transform 0.5s ease-in-out;
+    /* Add a smooth transition for the flip effect 
+    /*transform: rotateY(180deg);
+    /* Rotate the text initially 
+}*/
+
+/*#nav i {
+    /*transition: transform 0.5s ease-in-out;
+    /* Add a smooth transition for the flip effect 
+}*/
+
+/* Show the text and flip the icon when hovering over the #nav element */
+/*#nav:hover i {
+    transform: rotateY(180deg);
+    /* Flip the icon 
+}*/
+
+/*#nav:hover #nav-text {
+    display: inline-block;
+    transform: rotateY(0deg);
+    /* Flip the text back to its original position 
+}*/
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#nav h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+#nav:hover a {
+    transform: scale(1.5);
+    /* Adjust the scale factor as needed */
+}
+
+#bigheading {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+
+#bigheading h1 {
+    /*font-family: "General Sans Medium";*/
+    /*margin-left: 30px;*/
+    line-height: 1;
+    font-size: 10vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    /*background: linear-gradient(to right, #7F7FD5, #91EAE4, #12C2E9);*/
+    /* Customize the gradient colors */
+    /*-webkit-background-clip: text;*/
+    /* Apply the gradient as text fill for webkit browsers (Safari/Chrome) */
+    /*background-clip: text;*/
+    /* Apply the gradient as text fill for other browsers */
+    /* color: transparent;*/
+    /* Hide the original text */
+    color: #F7F7F7;
+    position: relative;
+    /*animation: floatAnimation 3s ease-in-out infinite;
+    animation-name: floatAnimation;*/
+    animation-duration: 2s;
+    /* Total animation duration remains the same */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    /* Delay the start of the animation by 2 seconds */
+    /*background-image: url(./media/background-3104413.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: cover;*/
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+}
+
+
+/*@keyframes floatAnimation {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Adjust the distance you want the heading to float 
+    }
+}*/
+
+h5 {
+    font-family: "General Sans Medium";
+    color: #91EAE4;
+    letter-spacing: 2px;
+}
+
+#bigheading #secondh1 {
+    margin-left: 230px;
+
+}
+
+.blocktext {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: fit-content;
+}
+
+.blocktext h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: right !important;
+}
+
+#smallheading {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 100px;
+    padding-right: 50px;
+}
+
+#smallheading h5 {
+    margin-top: .5vw;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+
+#footer {
+    padding: 0 2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#footer a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*#footer #iconset {
+    display: flex;
+    gap: 15px;
+
+}*/
+
+
+/*second page shuru*/
+
+
+#second {
+    color: #fff;
+    padding-right: 10vw;
+    padding-top: 200px;
+    width: 100%;
+    height: 100vh;
+    padding-left: 50px;
+    /*background-color: black;*/
+}
+
+#second img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+/* Add transition to the text elements in .elem */
+.elem .text,
+.elem h5 {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.8s ease;
+    /* Add transition for both opacity and transform */
+    transform-origin: center;
+    padding-left: 10px;
+}
+
+
+.elem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3.5vw 3vw;
+    padding-right: 0;
+    border-top: 1px solid #888;
+}
+
+/*.elem h1,.elem h5 {
+    transition: transform 0.8s ease; /* Add a transition effect to the transform property 
+}*/
+
+#second .text {
+    /*background: linear-gradient(to right, #7F7FD5, #91EAE4, #12C2E9);*/
+    /* Customize the gradient colors */
+    /*-webkit-background-clip: text;*/
+    /* Apply the gradient as text fill for webkit browsers (Safari/Chrome) */
+    /*background-clip: text;*/
+    /* Apply the gradient as text fill for other browsers */
+    /*color: transparent;*/
+    /* Hide the original text */
+    color: whitesmoke;
+}
+
+
+
+.elem:hover h1,
+.elem:hover h5 {
+    opacity: 0.2;
+    /* Adjust the opacity value as desired */
+    transform: scale(1.05);
+    transition: all .8s ease;
+    transform: translate(10px, 10px);
+}
+
+.elem h1 {
+    text-transform: uppercase;
+    font-size: 7.6vw;
+    opacity: .7;
+}
+
+.elem a {
+    text-decoration: none;
+}
+
+.elemlast {
+    border-bottom: 1px solid #888;
+}
+
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
+    z-index: 999;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/*third page shuru*/
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    color: #fff;
+    margin-top: 600px;
+    background-color: black;
+    margin-bottom: 200px;
+}
+
+#textabout {
+    width: 25rem;
+    font-size: 20px;
+}
+
+#textabout h5 {
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 10px;
+
+}
+
+#textabout p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+
+}
+
+#about img {
+    width: 20em;
+    height: 20em;
+    margin-right: 100px;
+}
+
+#initial-image:hover {
+    color: #111;
+}
+
+
+
+/**
+This will make image glow
+
+@keyframes neon {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    }
+    25% {
+        border-color: red; 
+        box-shadow: none;
+    }
+    50% {
+        border-color: transparent;
+        box-shadow: 0 0 10px red, 0 0 20x red, 0 0 30px red;
+    }
+    75% {
+        border-color: red;
+        box-shadow: none;
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    }
+}
+**/
+
+
+/*.hidden {
+    display: none;
+    text-decoration: underline;
+}*/
+
+
+#textabout a {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all ease 0.2s;
+
+}
+
+#textabout a:active {
+    scale: .9;
+
+}
+
+#textabout a:hover {
+    background-color: #33ffff;
+    /* Lighter blue color on hover */
+    box-shadow: 0 0 2px 4px rgba(0, 255, 255, 0.7);
+    /* Neon glow effect on hover */
+    color: black;
+}
+
+#subscribe {
+    color: #fff;
+    padding: 20px 30px;
+    padding-bottom: 7vw;
+    background-color: black;
+}
+
+#subscribe h5 {
+    text-transform: uppercase;
+    opacity: 0.6;
+    padding-bottom: 10px;
+}
+
+#subscribe h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    /*margin-top: 10px;*/
+    gap: 1500px;
+
+}
+
+button {
+    --border-radius: 15px;
+    --border-width: 4px;
+    appearance: none;
+    position: relative;
+    padding: 1em 2em;
+    border: 0;
+    background-color: #000;
+    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 2;
+}
+
+button::after {
+    --m-i: linear-gradient(#000, #000);
+    --m-o: content-box, padding-box;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: var(--border-width);
+    border-radius: var(--border-radius);
+    background-image: conic-gradient(#488cfb,
+            #29dbbc,
+            #ddf505,
+            #ff9f0e,
+            #e440bb,
+            #655adc,
+            #488cfb);
+    -webkit-mask-image: var(--m-i), var(--m-i);
+    mask-image: var(--m-i), var(--m-i);
+    -webkit-mask-origin: var(--m-o);
+    mask-origin: var(--m-o);
+    mask-clip: var(--m-o);
+    -webkit-mask-clip: var(--m-o);
+    mask-composite: exclude;
+    -webkit-mask-composite: destination-out;
+    filter: hue-rotate(0);
+    animation: rotate-hue linear 500ms infinite;
+    animation-play-state: paused;
+}
+
+button:hover::after {
+    animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}
+
+button,
+button::after {
+    box-sizing: border-box;
+}
+
+button:active {
+    --border-width: 5px;
+}
+
+#lastfooter {
+    background-color: #171717;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    /*background-color: #1b1b1e;*/
+    height: 100px;
+
+}
+
+#lastfooterleft {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+#lastfooterright {
+    display: flex;
+    gap: 30px;
+    /*font-size: px;*/
+
+}
+
+#lastfooter a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.copyright-sign {
+    font-size: 12px;
+}
+
+#preloader {
+    background: #ffffff url(./media/tube-spinner.svg) no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/*.checkbox{
+    height: 160px;
+    width: 320px;
+    background: #222;
+    appearance: none;
+    border-radius: 160px;
+    box-shadow: inset 0 8px 60px rgba(0,0,0,0.1),
+                inset 0 8px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.1);
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s;            
+}
+
+.checkbox::before{
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    background: linear-gradient(to bottom,#444,#222);
+    border-radius: 160px;
+    transform: scale(0.9);
+    transition: 0.5s;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5),
+                inset 4px 4px rgba(255,255,255,0.2),
+                inset -4px 4px rgba(255,255,255,0.2);
+}
+
+.checkbox:checked{
+    background: #fff;
+    box-shadow: inset 0 2px 60px rgba(0,0,0,0.1),
+                inset 0 2px 8px rgba(0,0,0,0.1),
+                inset 0 -4px 4px rgba(0,0,0,0.05);
+}
+
+.checkbox:checked::before{
+    left: 160px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1),
+                inset 4px 4px rgba(255,255,255,1),
+                inset -4px 4px rgba(255,255,255,1);
+    background: linear-gradient(to bottom,#eaeaea,#f9f9f9);            
+}
+
+.checkbox::after{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: #2b2b2b;
+    top: 80px;
+    left: 160px;
+    z-index: -1;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+}
+
+.checkbox:checked::after{
+    background: #f8f8f8;
+}*/
